@@ -1,0 +1,59 @@
+.app {
+    section#hero {
+        height: 500px;
+        padding: 50px 40px;
+        color: #000;
+        background-image: url('./assets/images/porsche-normal.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
+        cursor: pointer;
+
+        .hero-container {
+            color: #000;
+            transition: all ease 0.5s;
+
+            &:hover {
+                color: #d5001c;
+            }
+
+            .hero-title {
+                font-weight: 600;
+                line-height: 38px;
+                margin: 0;
+                font-size: 2.5em;
+
+                &::before {
+                    width: 1em;
+                    color: #d5001c;
+                    font-size: 28px;
+                    content: '>';
+                    margin-left: -22px;
+                }
+            }
+
+            .hero-sub-title {
+                font-weight: 600;
+                font-size: 1.5em;
+                line-height: 1.5em;
+                margin: 0;
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .app {
+        section#hero {
+            .hero-container {
+                .hero-sub-title,
+                .hero-title {
+                    max-width: 1200px;
+                    width: 100%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
